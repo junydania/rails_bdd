@@ -21,8 +21,9 @@ Feature: Add comments to an article
     And I should see "Trump's 100 Days "
     And I should see "Habits of successful people"
     When I click on "Read Article" link
-    Then I should visit the "article" show page
-    And I should see the "article" content
+    Then I should visit the "Habits of successful people" show page
+    And I should see the "Habits of successful people" as title
+    And I should see the "Successful people are consistent, persistent and risk takers" as content
     And I should see a "Comment" form
     And I fill "Getting up early is also an habit" into the comment form"
     And I click on "Submit" button
