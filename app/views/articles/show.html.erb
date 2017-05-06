@@ -1,3 +1,4 @@
+
 <div class = "article page">
 
   <h2><%= @article.title %></h2>
@@ -7,3 +8,28 @@
 </div>
 
 
+<div>
+
+  <h3>Comments:</h3>
+
+  <%= form_for([@article, @article.comments.new]) do |f| %>
+
+      <div class = "comment_area">
+        <%= f.label :comment_content %><br>
+        <%= f.text_area :comment_content %>
+      </div>
+
+      <div class = "email">
+        <%= f.label :visitor_email %><br>
+        <%= f.email_field :visitor_email %>
+      </div>
+
+      <div class = "submit">
+          <%= f.submit %>
+      </div>
+
+  <% end %>
+
+  <%= link_to 'Back to all Articles', landing_index_path %>
+
+</div>

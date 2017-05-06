@@ -25,11 +25,8 @@ Feature: Add comments to an article
     And I should see the "Habits of successful people" as title
     And I should see the "Successful people are consistent, persistent and risk takers" as content
     And I should see a "Comment" form
-    And I fill "Getting up early is also an habit" into the comment form"
+    And I fill "comment_comment_content" field with "Getting up early is also an habit"
+    And I fill "email" field with "oj@dania.com"
     And I click on "Submit" button
     Then I should see "Comment successfully added"
     And I should see the added comment on the article show page
-
-
-
-

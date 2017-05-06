@@ -11,17 +11,17 @@ Then(/^I should see the "([^"]*)" as title$/) do |title|
   expect(page).to have_content title
 end
 
-Then(/^I should see the "([^"]*)" as content$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see the "([^"]*)" as content$/) do |content|
+  expect(page).to have_content content
 end
 
 
-Then(/^I should see a "([^"]*)" form$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I should see a "([^"]*)" form$/) do |content|
+  expect(page).to have_selector ('div.comment_area')
 end
 
-Then(/^I fill "([^"]*)" into the comment form"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I fill "([^"]*)" field with "([^"]*)"$/) do |field, content|
+    fill_in(field, with: content)
 end
 
 Then(/^I click on "([^"]*)" button$/) do |arg1|
