@@ -1,8 +1,12 @@
+
 <ul>
   <% @articles.each do |article| %>
-    <li>
-      <%= article.title %><br />
-      <%= article.content %>
-    </li>
+      <li>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= link_to 'Read Article', article_path(article) %></td>
+        </tr>
+      </li>
   <% end %>
 </ul>
+

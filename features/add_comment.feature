@@ -3,6 +3,7 @@ Feature: Add comments to an article
   when I visit the application's landing page and view an article
   I should able to add a comment to the article
 
+
   Background:
     Given the following articles exists
       | title                                | content                                                             |
@@ -19,10 +20,11 @@ Feature: Add comments to an article
     And I should see "Is Bigger really better?"
     And I should see "Trump's 100 Days "
     And I should see "Habits of successful people"
-    When I click on "Habits of successful people"
+    When I click on "Read Article" link
     Then I should visit the "article" show page
+    And I should see the "article" content
     And I should see a "Comment" form
-    And I should fill "Getting up early is also an habit" into the comment form"
+    And I fill "Getting up early is also an habit" into the comment form"
     And I click on "Submit" button
     Then I should see "Comment successfully added"
     And I should see the added comment on the article show page

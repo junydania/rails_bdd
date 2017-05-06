@@ -1,5 +1,5 @@
 require 'rails_helper'
-require './app/models/article.rb'
+require './app/models/articles.rb'
 
 
 RSpec.describe Article, type:  :model do
@@ -16,7 +16,7 @@ RSpec.describe Article, type:  :model do
 
   describe 'Factory' do
     it 'should have valid Factory' do
-      expect(FactoryGirl.create(:article)).to be_valid
+      expect(FactoryGirl.create(:articles)).to be_valid
     end
   end
 end
