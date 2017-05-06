@@ -28,7 +28,3 @@ end
 Then(/^I click on "([^"]*)" button$/) do |button|
   click_button button
 end
-
-Then(/^I should see the added "([^"]*)" as content$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end

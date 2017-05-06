@@ -31,4 +31,8 @@ Feature: Add comments to an article
     And I should see on the page "Getting up early is also an habit"
     And I should see on the page "Posted by:"
 
-  # Scenario: Testing Sad path when wrong email format is entered
+  Scenario: Testing Sad path when wrong email format is entered
+    And I fill "comment_comment_content" field with "Getting up early is also an habit"
+    And I fill "email" field with "oj@dania"
+    And I click on "Add Comment" button
+    Then I should see on the page "Ooops!! Wrong email format"
