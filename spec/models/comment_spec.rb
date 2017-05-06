@@ -1,5 +1,12 @@
 require 'rails_helper'
+require './app/models/comment.rb'
+
 
 RSpec.describe Comment, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'DB Table' do
+    it { is_expected.to have_db_column  :id }
+    it { is_expected.to have_db_column  :comment_content }
+    it { is_expected.to have_db_column  :visitor_email }
+    it { should belong_to(:article)}
+  end
 end

@@ -1,5 +1,5 @@
 require 'rails_helper'
-require './app/models/articles.rb'
+require './app/models/article.rb'
 
 
 RSpec.describe Article, type:  :model do
@@ -16,7 +16,14 @@ RSpec.describe Article, type:  :model do
 
   describe 'Factory' do
     it 'should have valid Factory' do
-      expect(FactoryGirl.create(:articles)).to be_valid
+      expect(FactoryGirl.create(:article)).to be_valid
     end
+  end
+
+  describe 'Test Associations' do
+  it 'has many comments' do
+    relation = described_class.reflect_on_association(:comments)
+    expect(relation.macro).to eq :has_many
+  end
   end
 end

@@ -7,12 +7,13 @@ Then(/^I should visit the "([^"]*)" show page$/) do |article_title|
   visit article_path(article)
 end
 
-Then(/^I should see the "([^"]*)" as title$/) do |title|
-  expect(page).to have_content title
+
+Then(/^I should see on the page "([^"]*)"$/) do |content|
+  expect(page).to have_content content
 end
 
-Then(/^I should see the "([^"]*)" as content$/) do |content|
-  expect(page).to have_content content
+Then(/^I should see on the "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
 
 
@@ -24,10 +25,10 @@ Then(/^I fill "([^"]*)" field with "([^"]*)"$/) do |field, content|
     fill_in(field, with: content)
 end
 
-Then(/^I click on "([^"]*)" button$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/^I click on "([^"]*)" button$/) do |button|
+  click_button button
 end
 
-Then(/^I should see the added comment on the article show page$/) do
+Then(/^I should see the added "([^"]*)" as content$/) do |arg1|
   pending # Write code here that turns the phrase above into concrete actions
 end

@@ -12,9 +12,6 @@ Feature: Add comments to an article
       | Trump's 100 Days                     | Its been 100 days since Donald trump was sworn into power           |
       | Habits of successful people          | Successful people are consistent, persistent and risk takers        |
 
-
-
-  Scenario: Add Comment to an article
     When I am on the landing page
     Then I should see "Best resources when learning to code"
     And I should see "Is Bigger really better?"
@@ -22,11 +19,16 @@ Feature: Add comments to an article
     And I should see "Habits of successful people"
     When I click on "Read Article" link
     Then I should visit the "Habits of successful people" show page
-    And I should see the "Habits of successful people" as title
-    And I should see the "Successful people are consistent, persistent and risk takers" as content
+    And I should see on the page "Habits of successful people"
+    And I should see on the page "Successful people are consistent, persistent and risk takers"
     And I should see a "Comment" form
+
+  Scenario: Add Comment to an article
     And I fill "comment_comment_content" field with "Getting up early is also an habit"
     And I fill "email" field with "oj@dania.com"
-    And I click on "Submit" button
-    Then I should see "Comment successfully added"
-    And I should see the added comment on the article show page
+    And I click on "Add Comment" button
+    Then I should see on the page "Comment successfully added"
+    And I should see on the page "Getting up early is also an habit"
+    And I should see on the page "Posted by:"
+
+  # Scenario: Testing Sad path when wrong email format is entered
