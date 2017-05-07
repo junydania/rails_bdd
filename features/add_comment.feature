@@ -37,8 +37,8 @@ Feature: Add comments to an article
     And I click on "Add Comment" button
     Then I should see on the page "Ooops!! something is wrong"
 
-    Scenario: Testing Sad path when No content is entered into the comment field
-      And I fill "comment_comment_content" field with ""
-      And I fill "email" field with "oj@dania"
-      And I click on "Add Comment" button
-      Then I should see on the page "Ooops!! something is wrong"
+  Scenario: Testing Sad path when No content is entered into the comment field
+    And I fill "comment_comment_content" field with ""
+    And I fill "email" field with "oj@dania"
+    And I click on "Add Comment" button
+    Then I should see on the page "Ooops!! something is wrong"
