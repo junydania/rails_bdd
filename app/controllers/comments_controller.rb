@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
       flash[:notice] = "Comment successfully added"
       redirect_to article_path(@article)
     else
-      flash[:error] = "Ooops!! Wrong email format"
+      flash[:error] = "Ooops!! something is wrong"
       redirect_to article_path(@article)
     end
   end
