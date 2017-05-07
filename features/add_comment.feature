@@ -36,3 +36,9 @@ Feature: Add comments to an article
     And I fill "email" field with "oj@dania"
     And I click on "Add Comment" button
     Then I should see on the page "Ooops!! Wrong email format"
+
+    Scenario: Testing Sad path when No content is entered into the comment field
+      And I fill "comment_comment_content" field with "Getting up early is also an habit"
+      And I fill "email" field with "oj@dania"
+      And I click on "Add Comment" button
+      Then I should see on the page "Ooops!! Wrong email format"

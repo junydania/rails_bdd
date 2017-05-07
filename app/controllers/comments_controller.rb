@@ -19,7 +19,12 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
+    # unless (params[:comment_content]).blank?
       params.require(:comment).permit(:comment_content, :visitor_email)
+    # end
   end
 
 end
+
+
+# if !agent.cell.blank?
