@@ -7,11 +7,11 @@ Feature: Add comments to an article
 
   Background:
     Given the following articles exists
-      | title                                | content                                                             |
-      | Best resources when learning to code | Several online resources like Lynda, Udemy, Coursera and Edx        |
-      | Is Bigger really better?             | Bigger does't not necessarily mean that it is better                |
-      | Trump's 100 Days                     | Its been 100 days since Donald trump was sworn into power           |
-      | Habits of successful people          | Successful people are consistent, persistent and risk takers        |
+      | title                                | content                                                             |author           |
+      | Best resources when learning to code | Several online resources like Lynda, Udemy, Coursera and Edx        |Dania            |
+      | Is Bigger really better?             | Bigger does't not necessarily mean that it is better                |OJ               |
+      | Trump's 100 Days                     | Its been 100 days since Donald trump was sworn into power           |Raoul            |
+      | Habits of successful people          | Successful people are consistent, persistent and risk takers        |Dania            |
 
     When I am on the landing page
     Then I should see "Best resources when learning to code"
@@ -22,6 +22,7 @@ Feature: Add comments to an article
     Then I should visit the "Habits of successful people" show page
     And I should see on the page "Habits of successful people"
     And I should see on the page "Successful people are consistent, persistent and risk takers"
+    And I should see on the page "Written by: Dania at 2017-05-08"
     And I should see a "Comment" form
 
   Scenario: Add Comment to an article
