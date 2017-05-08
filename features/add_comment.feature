@@ -44,3 +44,12 @@ Feature: Add comments to an article
     And I fill "email" field with "oj@dania"
     And I click on "Add Comment" button
     Then I should see on the page "Ooops!! something is wrong"
+
+    Scenario: Test to check for anonymous
+      And I fill "comment_comment_content" field with "Continous learning is also important"
+      And I fill "email" field with ""
+      And I click on "Add Comment" button
+      Then I should see on the page "Posted by: anonymous"
+      And I should see on the page "Continous learning is also important"
+
+      
